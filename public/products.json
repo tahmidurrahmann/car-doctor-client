@@ -1,0 +1,39 @@
+[
+    {
+      "rating": 4.5,
+      "name": "Product X",
+      "price": 29.99,
+      "image": "https://i.ibb.co/7K6SB9W/1.png"
+    },
+    {
+      "rating": 4.2,
+      "name": "Product Y",
+      "price": 39.99,
+      "image": "https://i.ibb.co/vdYb6hV/2.png"
+    },
+    {
+      "rating": 3.9,
+      "name": "Product Z",
+      "price": 49.99,
+      "image": "https://i.ibb.co/gV8sbcj/3.png"
+    },
+    {
+      "rating": 4.8,
+      "name": "Product W",
+      "price": 19.99,
+      "image": "https://i.ibb.co/60VS0nN/4.png"
+    },
+    {
+      "rating": 4.0,
+      "name": "Product V",
+      "price": 59.99,
+      "image": "https://i.ibb.co/jk0088v/5.png"
+    },
+    {
+      "rating": 4.3,
+      "name": "Product U",
+      "price": 69.99,
+      "image": "https://i.ibb.co/njR5Bkg/6.png"
+    }
+  ]
+  
