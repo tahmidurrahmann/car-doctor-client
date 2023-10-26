@@ -52,7 +52,7 @@ const Register = () => {
         })
         .catch(error => {
             const message = error.message;
-            console.log(message);
+            toast.error(message)
         })
     }
 
