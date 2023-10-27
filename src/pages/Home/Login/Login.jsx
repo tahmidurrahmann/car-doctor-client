@@ -3,6 +3,7 @@ import login from '../../../assets/images/login/login.svg'
 import { useContext } from 'react';
 import { AuthContext } from '../../../provider/AuthProvider';
 import toast from 'react-hot-toast';
+import axios from 'axios';
 
 const Login = () => {
 
@@ -16,16 +17,24 @@ const Login = () => {
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
         loginUser(email, password)
-        .then(() => {
-            navigate(location?.state ? location.state : "/")
-            toast.success('Login Successful')
-        })
-        .catch(error => {
-            const message = error.message;
-            toast.error(message)
-        })
+            .then(() => {
+                toast.success('Login Successful')
+                const user = { email };
+                axios.post('http://localhost:5000/jwt', user, {
+                    withCredentials: true,
+                })
+                    .then(res => {
+                        if (res.data.success) {
+                            navigate(location?.state ? location.state : "/")
+                        }
+                    })
+            })
+            .catch(error => {
+                const message = error.message;
+                toast.error(message)
+            })
     }
 
     return (

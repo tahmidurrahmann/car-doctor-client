@@ -19,16 +19,16 @@ const Navbar = () => {
             })
     }
 
-    const navLinks = <>
+    const navLinks =  <div className='flex justify-center items-center'>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/about'>About</Link></li>
         {
             user ? <div>
-                {user &&  <div className='flex flex-col lg:flex-row justify-center items-center gap-3'> {user.displayName} <img className='w-[50px] rounded-full' src={user.photoURL} alt="" /><button className='py-1 px-2 font-medium rounded-lg bg-[#FF3811] text-white' onClick={handleLogout}>Logout </button></div> }
+                {user &&  <div className='flex flex-col lg:flex-row justify-center items-center gap-3'> <li><Link to='/bookings'>My Booking</Link></li> {user.displayName} <img className='w-[50px] rounded-full' src={user.photoURL} alt="" /><button className='py-1 px-2 font-medium rounded-lg bg-[#FF3811] text-white' onClick={handleLogout}>Logout </button></div> }
             </div> :
     <li><Link to='/login'>Login</Link></li>
 }
-    </>
+    </div>
 
     return (
     <div className="navbar bg-base-100 h-32">
